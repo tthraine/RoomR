@@ -2,4 +2,6 @@
 
 require:
     - play
-    - play -> crud
+    - play -> gae 1.6.0
+    - play -> siena 2.0.6
+    - play -> crudsiena 2.0.2

@@ -8,7 +8,7 @@ public class Bootstrap extends Job {
 	@Override
 	public void doJob() {
 		// Check if the database is empty
-		if (User.count() == 0) {
+		if (User.all().fetch(1).size() == 0) {
 			Fixtures.loadModels("initial-data.yml");
 		}
 	}

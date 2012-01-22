@@ -11,7 +11,9 @@ public class Admin extends Controller {
 	@Before
 	static void setConnectedUser() {
 		if (Security.isConnected()) {
-			User user = User.find("byEmail", Security.connected()).first();
+			// User user = User.all().filter("email",
+			// Security.connected()).get();
+			User user = new User("test", "test", "testTest");
 			renderArgs.put("user", user.fullname);
 		}
 	}
